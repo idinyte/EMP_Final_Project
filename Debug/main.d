@@ -13,7 +13,7 @@ main.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/machine
 main.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h
 main.obj: ../tm4c123gh6pm.h
 main.obj: ../emp_type.h
-main.obj: ../systick_frt.h
+main.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/systick_frt.h
 main.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/FreeRTOS.h
 main.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stddef.h
 main.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/FreeRTOSConfig.h
@@ -27,6 +27,9 @@ main.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/lis
 main.obj: ../status_led.h
 main.obj: ../adc.h
 main.obj: ../gpio.h
+main.obj: ../lcd.h
+main.obj: ../tmodel.h
+main.obj: ../queue.h
 
 ../main.c:
 
@@ -54,7 +57,7 @@ C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h:
 
 ../emp_type.h:
 
-../systick_frt.h:
+C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/systick_frt.h:
 
 C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/FreeRTOS.h:
 
@@ -81,4 +84,10 @@ C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h:
 ../adc.h:
 
 ../gpio.h:
+
+../lcd.h:
+
+../tmodel.h:
+
+../queue.h:
 

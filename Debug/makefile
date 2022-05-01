@@ -13,6 +13,7 @@ ORDERED_OBJS += \
 "./adc.obj" \
 "./gpio.obj" \
 "./heap_2.obj" \
+"./lcd.obj" \
 "./list.obj" \
 "./main.obj" \
 "./port.obj" \
@@ -165,8 +166,8 @@ EMP_Final_Project.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "adc.obj" "gpio.obj" "heap_2.obj" "list.obj" "main.obj" "port.obj" "portasm.obj" "queue.obj" "startup_frt.obj" "status_led.obj" "systick_frt.obj" "tasks.obj" 
-	-$(RM) "adc.d" "gpio.d" "heap_2.d" "list.d" "main.d" "port.d" "queue.d" "startup_frt.d" "status_led.d" "systick_frt.d" "tasks.d" 
+	-$(RM) "adc.obj" "gpio.obj" "heap_2.obj" "lcd.obj" "list.obj" "main.obj" "port.obj" "portasm.obj" "queue.obj" "startup_frt.obj" "status_led.obj" "systick_frt.obj" "tasks.obj" 
+	-$(RM) "adc.d" "gpio.d" "heap_2.d" "lcd.d" "list.d" "main.d" "port.d" "queue.d" "startup_frt.d" "status_led.d" "systick_frt.d" "tasks.d" 
 	-$(RM) "portasm.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

@@ -1,57 +1,56 @@
 /*****************************************************************************
 * University of Southern Denmark
-* Embedded Programming (EMP)
+* Embedded C Programming (ECP)
 *
-* MODULENAME.: systick_frt.h
+* MODULENAME.: leds.h
 *
-* PROJECT....: EMP
+* PROJECT....: ECP
 *
-* DESCRIPTION: Initialize the systick interrupt.
+* DESCRIPTION: Test.
 *
 * Change Log:
 ******************************************************************************
 * Date    Id    Change
 * YYMMDD
 * --------------------
-* 150215  MoH    Module created.
+* 050128  KA    Module created.
 *
 *****************************************************************************/
 
-#ifndef _SYSTICK_FRT_H
-  #define _SYSTICK_FRT_H
+#ifndef _LCD_H
+  #define _LCD_H
 
 /***************************** Include files *******************************/
 
 /*****************************    Defines    *******************************/
+// Special ASCII characters
+// ------------------------
 
+#define LF		0x0A
+#define FF		0x0C
+#define CR		0x0D
+
+#define ESC		0x1B
+
+#define  LCD_POWER_UP      0
+#define  LCD_INIT          1
+#define  LCD_READY         2
+#define  LCD_ESC_RECEIVED  3
 /*****************************   Constants   *******************************/
 
 /*****************************   Functions   *******************************/
-void enable_global_int();
+void wr_str_LCD( INT8U* );
+void move_LCD( INT8U, INT8U );
+INT8U wr_ch_LCD( INT8U Ch );
+
+void lcd_task(void *pvParameters);
 /*****************************************************************************
 *   Input    : -
 *   Output   : -
-*   Function : Enable global interrupt.
-******************************************************************************/
-
-
-void disable_global_int();
-/*****************************************************************************
-*   Input    : -
-*   Output   : -
-*   Function : Disable global interrupt.
-******************************************************************************/
-
-
-void init_systick();
-/*****************************************************************************
-*   Input    : -
-*   Output   : -
-*   Function : Initialize the systick interrupt.
+*   Function : Test function
 ******************************************************************************/
 
 
 /****************************** End Of Module *******************************/
 #endif
-
 

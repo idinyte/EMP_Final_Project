@@ -15,6 +15,7 @@ C_SRCS += \
 ../adc.c \
 ../gpio.c \
 ../heap_2.c \
+../lcd.c \
 ../list.c \
 ../main.c \
 ../port.c \
@@ -28,6 +29,7 @@ C_DEPS += \
 ./adc.d \
 ./gpio.d \
 ./heap_2.d \
+./lcd.d \
 ./list.d \
 ./main.d \
 ./port.d \
@@ -41,6 +43,7 @@ OBJS += \
 ./adc.obj \
 ./gpio.obj \
 ./heap_2.obj \
+./lcd.obj \
 ./list.obj \
 ./main.obj \
 ./port.obj \
@@ -58,6 +61,7 @@ OBJS__QUOTED += \
 "adc.obj" \
 "gpio.obj" \
 "heap_2.obj" \
+"lcd.obj" \
 "list.obj" \
 "main.obj" \
 "port.obj" \
@@ -72,6 +76,7 @@ C_DEPS__QUOTED += \
 "adc.d" \
 "gpio.d" \
 "heap_2.d" \
+"lcd.d" \
 "list.d" \
 "main.d" \
 "port.d" \
@@ -88,6 +93,7 @@ C_SRCS__QUOTED += \
 "../adc.c" \
 "../gpio.c" \
 "../heap_2.c" \
+"../lcd.c" \
 "../list.c" \
 "../main.c" \
 "../port.c" \
