@@ -13,8 +13,10 @@ ASM_SRCS += \
 
 C_SRCS += \
 ../adc.c \
+../file.c \
 ../gpio.c \
 ../heap_2.c \
+../key.c \
 ../lcd.c \
 ../list.c \
 ../main.c \
@@ -22,13 +24,16 @@ C_SRCS += \
 ../queue.c \
 ../startup_frt.c \
 ../status_led.c \
+../string.c \
 ../systick_frt.c \
 ../tasks.c 
 
 C_DEPS += \
 ./adc.d \
+./file.d \
 ./gpio.d \
 ./heap_2.d \
+./key.d \
 ./lcd.d \
 ./list.d \
 ./main.d \
@@ -36,13 +41,16 @@ C_DEPS += \
 ./queue.d \
 ./startup_frt.d \
 ./status_led.d \
+./string.d \
 ./systick_frt.d \
 ./tasks.d 
 
 OBJS += \
 ./adc.obj \
+./file.obj \
 ./gpio.obj \
 ./heap_2.obj \
+./key.obj \
 ./lcd.obj \
 ./list.obj \
 ./main.obj \
@@ -51,6 +59,7 @@ OBJS += \
 ./queue.obj \
 ./startup_frt.obj \
 ./status_led.obj \
+./string.obj \
 ./systick_frt.obj \
 ./tasks.obj 
 
@@ -59,8 +68,10 @@ ASM_DEPS += \
 
 OBJS__QUOTED += \
 "adc.obj" \
+"file.obj" \
 "gpio.obj" \
 "heap_2.obj" \
+"key.obj" \
 "lcd.obj" \
 "list.obj" \
 "main.obj" \
@@ -69,13 +80,16 @@ OBJS__QUOTED += \
 "queue.obj" \
 "startup_frt.obj" \
 "status_led.obj" \
+"string.obj" \
 "systick_frt.obj" \
 "tasks.obj" 
 
 C_DEPS__QUOTED += \
 "adc.d" \
+"file.d" \
 "gpio.d" \
 "heap_2.d" \
+"key.d" \
 "lcd.d" \
 "list.d" \
 "main.d" \
@@ -83,6 +97,7 @@ C_DEPS__QUOTED += \
 "queue.d" \
 "startup_frt.d" \
 "status_led.d" \
+"string.d" \
 "systick_frt.d" \
 "tasks.d" 
 
@@ -91,8 +106,10 @@ ASM_DEPS__QUOTED += \
 
 C_SRCS__QUOTED += \
 "../adc.c" \
+"../file.c" \
 "../gpio.c" \
 "../heap_2.c" \
+"../key.c" \
 "../lcd.c" \
 "../list.c" \
 "../main.c" \
@@ -100,6 +117,7 @@ C_SRCS__QUOTED += \
 "../queue.c" \
 "../startup_frt.c" \
 "../status_led.c" \
+"../string.c" \
 "../systick_frt.c" \
 "../tasks.c" 
 

@@ -1,1 +1,1 @@
-"./adc.obj" "./gpio.obj" "./heap_2.obj" "./lcd.obj" "./list.obj" "./main.obj" "./port.obj" "./portasm.obj" "./queue.obj" "./startup_frt.obj" "./status_led.obj" "./systick_frt.obj" "./tasks.obj" "../tm4c123gh6pm.cmd" -llibc.a 
+"./adc.obj" "./file.obj" "./gpio.obj" "./heap_2.obj" "./key.obj" "./lcd.obj" "./list.obj" "./main.obj" "./port.obj" "./portasm.obj" "./queue.obj" "./startup_frt.obj" "./status_led.obj" "./string.obj" "./systick_frt.obj" "./tasks.obj" "../tm4c123gh6pm.cmd" -llibc.a 

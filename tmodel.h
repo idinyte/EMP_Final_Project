@@ -20,6 +20,7 @@
 #ifndef _TMODEL_H_
 #define _TMODEL_H_
 
+/* not used so far
 // Tasks.
 // ------
 #define TASK_LCD         USER_TASK
@@ -29,11 +30,12 @@
 // -----------
 #define SEM_LCD          USER_SEM
 #define SEM_RTC_UPDATED  USER_SEM+1
+*/
 
 // QUEUEs.
 // -------
-#define Q_LCD       USER_QUEUE
-#define LCD_QUEUE_LEN 128
+#define LCD_QUEUE_LEN 4
+#define KEY_QUEUE_LEN 64
 
 
 #endif /* _TMODEL_H_ */

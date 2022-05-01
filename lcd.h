@@ -2,7 +2,7 @@
 * University of Southern Denmark
 * Embedded C Programming (ECP)
 *
-* MODULENAME.: leds.h
+* MODULENAME.: lcd.h
 *
 * PROJECT....: ECP
 *

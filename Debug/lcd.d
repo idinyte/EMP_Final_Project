@@ -27,6 +27,7 @@ lcd.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/mpu_
 lcd.obj: ../queue.h
 lcd.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/task.h
 lcd.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h
+lcd.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/semphr.h
 
 ../lcd.c:
 
@@ -81,4 +82,6 @@ C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/mpu_wrappers.
 C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/task.h:
 
 C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h:
+
+C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/semphr.h:
 

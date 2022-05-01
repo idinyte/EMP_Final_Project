@@ -5,8 +5,9 @@ tasks.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdlib
 tasks.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/_ti_config.h
 tasks.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/linkage.h
 tasks.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/cdefs.h
-tasks.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/string.h
-tasks.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/xlocale/_string.h
+tasks.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/string.h
+tasks.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/file.h
+tasks.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/emp_type.h
 tasks.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/FreeRTOS.h
 tasks.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stddef.h
 tasks.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stdint.h
@@ -37,9 +38,11 @@ C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/linkage.h:
 
 C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/cdefs.h:
 
-C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/string.h:
+C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/string.h:
 
-C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/xlocale/_string.h:
+C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/file.h:
+
+C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/emp_type.h:
 
 C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/FreeRTOS.h:
 
