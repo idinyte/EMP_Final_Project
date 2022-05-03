@@ -46,7 +46,6 @@ const INT8U LCD_init_sequense[] = { 0x30,		// Reset
 /*****************************   Variables   *******************************/
 INT8U LCD_init;
 extern QueueHandle_t lcd_queue;
-//extern QueueHandle_t key_queue;
 extern SemaphoreHandle_t lcd_mutex;
 
 /*****************************   Functions   *******************************/
@@ -234,7 +233,7 @@ void lcd_task(void *pvParameters)
 
     while (1) // all tasks must be in an infinite while loop as they cannot return or RTOS breaks
     {
-        vTaskDelay(20 / portTICK_RATE_MS); // characters need to have 20ms delay between prints, maybe this line would fit better somewhere else
+        vTaskDelay(5 / portTICK_RATE_MS); // some delay, otherwise LCD prints nonsense
         switch (my_state)
         {
         case LCD_POWER_UP:
@@ -253,21 +252,26 @@ void lcd_task(void *pvParameters)
             vTaskDelay(100 / portTICK_RATE_MS);
             break;
         case LCD_READY:
-                if (xQueueReceive(lcd_queue, &ch, 0))
+            if (xQueueReceive(lcd_queue, &ch, 0))
+            {
+                xSemaphoreTake(lcd_mutex, 0); // if there is something in the queue, take mutex
+                switch (ch)
                 {
-                    switch (ch)
-                    {
-                    case 0xFF:
-                        clr_LCD();
-                        break;
-                    case ESC:
-                        my_state = LCD_ESC_RECEIVED;
-                        break;
-                    default:
-                        out_LCD(ch);
-                    }
+                case 0xFF:
+                    clr_LCD();
+                    break;
+                case ESC:
+                    my_state = LCD_ESC_RECEIVED;
+                    break;
+                default:
+                    out_LCD(ch);
                 }
-                break;
+            }
+            else
+            {
+                xSemaphoreGive(lcd_mutex); // if queue empty give mutex
+            }
+            break;
         case LCD_ESC_RECEIVED:
             if (xQueueReceive(lcd_queue, &ch, 0))
             {

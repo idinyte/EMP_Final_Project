@@ -25,6 +25,7 @@ key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/mpu_
 key.obj: ../queue.h
 key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/task.h
 key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h
+key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/semphr.h
 
 ../key.c:
 
@@ -75,4 +76,6 @@ C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/mpu_wrappers.
 C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/task.h:
 
 C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h:
+
+C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/semphr.h:
 

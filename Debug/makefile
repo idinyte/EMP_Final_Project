@@ -11,6 +11,7 @@ GEN_CMDS__FLAG :=
 
 ORDERED_OBJS += \
 "./adc.obj" \
+"./display.obj" \
 "./file.obj" \
 "./gpio.obj" \
 "./heap_2.obj" \
@@ -169,8 +170,8 @@ EMP_Final_Project.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "adc.obj" "file.obj" "gpio.obj" "heap_2.obj" "key.obj" "lcd.obj" "list.obj" "main.obj" "port.obj" "portasm.obj" "queue.obj" "startup_frt.obj" "status_led.obj" "string.obj" "systick_frt.obj" "tasks.obj" 
-	-$(RM) "adc.d" "file.d" "gpio.d" "heap_2.d" "key.d" "lcd.d" "list.d" "main.d" "port.d" "queue.d" "startup_frt.d" "status_led.d" "string.d" "systick_frt.d" "tasks.d" 
+	-$(RM) "adc.obj" "display.obj" "file.obj" "gpio.obj" "heap_2.obj" "key.obj" "lcd.obj" "list.obj" "main.obj" "port.obj" "portasm.obj" "queue.obj" "startup_frt.obj" "status_led.obj" "string.obj" "systick_frt.obj" "tasks.obj" 
+	-$(RM) "adc.d" "display.d" "file.d" "gpio.d" "heap_2.d" "key.d" "lcd.d" "list.d" "main.d" "port.d" "queue.d" "startup_frt.d" "status_led.d" "string.d" "systick_frt.d" "tasks.d" 
 	-$(RM) "portasm.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

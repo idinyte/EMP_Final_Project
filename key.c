@@ -24,8 +24,10 @@
 #include "tmodel.h"
 #include "FreeRTOS.h"
 #include "queue.h"
+#include "semphr.h"
 
 extern QueueHandle_t key_queue;
+extern SemaphoreHandle_t drink_selection;
 
 INT8U row( INT8U y )
 {
@@ -63,6 +65,14 @@ BOOLEAN check_column(INT8U x)
     {                                               // ...we first find the row number with the function row()
         INT8U ch = key_catch( x, row(y) );          // Now that we have the row and column we look up the corresponding character using the function key_catch
         xQueueSend( key_queue, &ch, 1 );            // Put the character in a queue so it can be used by another task
+        if (ch == '4' || ch == '6')
+        {
+            // check that there is free space in both: key_queue and drink_selection semaphore
+            if ((KEY_QUEUE_LEN - uxQueueMessagesWaiting(key_queue) - SEM_LEN_MED + uxSemaphoreGetCount(drink_selection) > 0))
+            {
+                xSemaphoreGive( drink_selection );
+            }
+        }
         return 1;
     }
     return 0;

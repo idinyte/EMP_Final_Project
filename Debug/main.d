@@ -30,9 +30,11 @@ main.obj: ../gpio.h
 main.obj: ../lcd.h
 main.obj: ../tmodel.h
 main.obj: ../queue.h
-main.obj: ../key.h
 main.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/semphr.h
 main.obj: ../file.h
+main.obj: ../display.h
+main.obj: ../key.h
+main.obj: ../portmacro.h
 
 ../main.c:
 
@@ -94,9 +96,13 @@ C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h:
 
 ../queue.h:
 
-../key.h:
-
 C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/semphr.h:
 
 ../file.h:
+
+../display.h:
+
+../key.h:
+
+../portmacro.h:
 

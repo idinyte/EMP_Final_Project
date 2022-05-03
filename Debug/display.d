@@ -13,9 +13,9 @@ display.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/mach
 display.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h
 display.obj: ../tm4c123gh6pm.h
 display.obj: ../emp_type.h
-display.obj: ../tmodel.h
 display.obj: ../lcd.h
-display.obj: ../file.h
+display.obj: ../glob_def.h
+display.obj: ../tmodel.h
 display.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/FreeRTOS.h
 display.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stddef.h
 display.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/FreeRTOSConfig.h
@@ -29,6 +29,8 @@ display.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/queu
 display.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/task.h
 display.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h
 display.obj: ../string.h
+display.obj: ../file.h
+display.obj: ../display.h
 
 ../display.c:
 
@@ -56,11 +58,11 @@ C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h:
 
 ../emp_type.h:
 
-../tmodel.h:
-
 ../lcd.h:
 
-../file.h:
+../glob_def.h:
+
+../tmodel.h:
 
 C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/FreeRTOS.h:
 
@@ -87,4 +89,8 @@ C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/task.h:
 C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h:
 
 ../string.h:
+
+../file.h:
+
+../display.h:
 

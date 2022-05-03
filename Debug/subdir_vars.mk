@@ -13,6 +13,7 @@ ASM_SRCS += \
 
 C_SRCS += \
 ../adc.c \
+../display.c \
 ../file.c \
 ../gpio.c \
 ../heap_2.c \
@@ -30,6 +31,7 @@ C_SRCS += \
 
 C_DEPS += \
 ./adc.d \
+./display.d \
 ./file.d \
 ./gpio.d \
 ./heap_2.d \
@@ -47,6 +49,7 @@ C_DEPS += \
 
 OBJS += \
 ./adc.obj \
+./display.obj \
 ./file.obj \
 ./gpio.obj \
 ./heap_2.obj \
@@ -68,6 +71,7 @@ ASM_DEPS += \
 
 OBJS__QUOTED += \
 "adc.obj" \
+"display.obj" \
 "file.obj" \
 "gpio.obj" \
 "heap_2.obj" \
@@ -86,6 +90,7 @@ OBJS__QUOTED += \
 
 C_DEPS__QUOTED += \
 "adc.d" \
+"display.d" \
 "file.d" \
 "gpio.d" \
 "heap_2.d" \
@@ -106,6 +111,7 @@ ASM_DEPS__QUOTED += \
 
 C_SRCS__QUOTED += \
 "../adc.c" \
+"../display.c" \
 "../file.c" \
 "../gpio.c" \
 "../heap_2.c" \
