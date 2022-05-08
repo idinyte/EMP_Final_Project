@@ -2,7 +2,7 @@
  * University of Southern Denmark
  * Embedded C Programming (ECP)
  *
- * MODULENAME.: leds.c
+ * MODULENAME.: display.c
  *
  * PROJECT....: ECP
  *
@@ -13,7 +13,7 @@
  * Date    Id    Change
  * YYMMDD
  * --------------------
- * 050128  KA    Module created.
+ * 220504  KA    Module created.
  *
  *****************************************************************************/
 
@@ -43,12 +43,14 @@ void display_task(void *pvParameters)
 /*****************************************************************************
  *   Input    :
  *   Output   :
- *   Function :
+ *   Function : send what to print to lcd_queue
  ******************************************************************************/
 {
     static INT8U my_state = INITIALIZE;
     static INT8U screen = ESPRESSO;
+    static INT8U counter = 0;
     INT8U price;
+    INT8U card_ch;
     while (1)
     {
         switch (my_state)
@@ -112,6 +114,52 @@ void display_task(void *pvParameters)
                 }
             }
             break;
+        case CARD_PAYMENT:
+            if (xQueueReceive(key_queue, &card_ch, 0)) // if input received
+            {
+                if (card_ch == '#' || card_ch == '*')
+                {
+                    break;
+                }
+                counter += 1;
+                if (xSemaphoreTake(lcd_mutex, portMAX_DELAY))
+                {
+                    if (counter < 16) // if card number
+                    {
+                        wr_ch_LCD(card_ch);
+                    }
+                    else if (counter == 16)
+                    {
+                        wr_ch_LCD(card_ch);
+                        gfprintf( COM2, "%cEnter card pin", 0xFF);
+                        move_LCD(0, 1);
+                        card_payment(card_ch, 0, 0); // send last card number to a banking function
+                    }
+                    else if (counter == 20)
+                    {
+                        wr_ch_LCD('*');
+                        if (card_payment(0, card_ch, 1)) // verify payment
+                        {
+                            gfprintf( COM2, "%cPayment accepted", 0xFF);
+                            vTaskDelay(1800 / portTICK_RATE_MS);
+                        }
+                        else
+                        {
+                            gfprintf( COM2, "%cPayment declined", 0xFF);
+                            vTaskDelay(1800 / portTICK_RATE_MS);
+                            gfprintf( COM2, "%cEnter card No.", 0xFF);
+                            move_LCD(0, 1);
+                            counter = 0;
+                        }
+                    }
+                    else // if pin
+                    {
+                        wr_ch_LCD('*');
+                    }
+                    xSemaphoreGive(lcd_mutex);
+                }
+            }
+            break;
         }
     }
 }
@@ -157,6 +205,15 @@ INT8U check_input(INT8U *my_state, INT8U *screen)
                         move_LCD(6, 1);
                         gfprintf( COM2, "cash");
                         *my_state = SELECT_PAYMENT;
+                        *screen = CASH;
+                    }
+                    else if (*my_state == SELECT_PAYMENT && *screen == CARD)
+                    {
+                        xQueueReset(key_queue);
+                        gfprintf( COM2, "%cEnter card No.", 0xFF);
+                        move_LCD(0, 1);
+                        *my_state = CARD_PAYMENT;
+                        *screen = EMPTY; // not empty, just genererated in display_task
                     }
                 }
                 // decide which screen to display

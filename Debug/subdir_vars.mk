@@ -13,6 +13,7 @@ ASM_SRCS += \
 
 C_SRCS += \
 ../adc.c \
+../bank.c \
 ../display.c \
 ../file.c \
 ../gpio.c \
@@ -31,6 +32,7 @@ C_SRCS += \
 
 C_DEPS += \
 ./adc.d \
+./bank.d \
 ./display.d \
 ./file.d \
 ./gpio.d \
@@ -49,6 +51,7 @@ C_DEPS += \
 
 OBJS += \
 ./adc.obj \
+./bank.obj \
 ./display.obj \
 ./file.obj \
 ./gpio.obj \
@@ -71,6 +74,7 @@ ASM_DEPS += \
 
 OBJS__QUOTED += \
 "adc.obj" \
+"bank.obj" \
 "display.obj" \
 "file.obj" \
 "gpio.obj" \
@@ -90,6 +94,7 @@ OBJS__QUOTED += \
 
 C_DEPS__QUOTED += \
 "adc.d" \
+"bank.d" \
 "display.d" \
 "file.d" \
 "gpio.d" \
@@ -111,6 +116,7 @@ ASM_DEPS__QUOTED += \
 
 C_SRCS__QUOTED += \
 "../adc.c" \
+"../bank.c" \
 "../display.c" \
 "../file.c" \
 "../gpio.c" \

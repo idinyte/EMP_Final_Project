@@ -28,6 +28,7 @@
 
 extern QueueHandle_t key_queue;
 extern SemaphoreHandle_t drink_selection;
+extern SemaphoreHandle_t keypad_input;
 
 INT8U row( INT8U y )
 {

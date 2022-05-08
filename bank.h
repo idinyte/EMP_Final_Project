@@ -23,12 +23,9 @@
 /***************************** Include files *******************************/
 
 /*****************************    Defines    *******************************/
-#define  EMPTY             -1
 #define  INITIALIZE         0
 #define  SELECT_COFFEE      1
 #define  SELECT_PAYMENT     2
-#define  CARD_PAYMENT       3
-#define  CASH_PAYMENT       4
 #define  ESPRESSO           9
 #define  LATTE              10
 #define  FILTER_COFFEE      11
@@ -37,18 +34,13 @@
 /*****************************   Constants   *******************************/
 
 /*****************************   Functions   *******************************/
-void display_task(void *pvParameters);
+INT8U card_payment(INT8U last_card, INT8U last_pin, INT8U verify);
 /*****************************************************************************
 *   Input    : -
 *   Output   : -
-*   Function : Tasks related to display
+*   Function : verify card payment
 ******************************************************************************/
-INT8U check_input(INT8U *my_state, INT8U *coffee);
-/*****************************************************************************
-*   Input    : -
-*   Output   : 0 if no input received and 1 if input received
-*   Function : Checks keypad queue and decides what to display
-******************************************************************************/
+
 
 /****************************** End Of Module *******************************/
 #endif
