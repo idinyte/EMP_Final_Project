@@ -1,7 +1,7 @@
 # FIXED
 
 port.obj: ../port.c
-port.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/FreeRTOS.h
+port.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/FreeRTOS.h
 port.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stddef.h
 port.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/_ti_config.h
 port.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/linkage.h
@@ -13,18 +13,18 @@ port.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_ty
 port.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/machine/_types.h
 port.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/machine/_stdint.h
 port.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h
-port.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/FreeRTOSConfig.h
-port.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/projdefs.h
-port.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/portable.h
-port.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/deprecated_definitions.h
-port.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/portmacro.h
-port.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/mpu_wrappers.h
-port.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/task.h
-port.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h
+port.obj: C:/Users/titus/OneDrive/Desktop/EP/EMP_Final_Project/FreeRTOSConfig.h
+port.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/projdefs.h
+port.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/portable.h
+port.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/deprecated_definitions.h
+port.obj: C:/Users/titus/OneDrive/Desktop/EP/EMP_Final_Project/portmacro.h
+port.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/mpu_wrappers.h
+port.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/task.h
+port.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/list.h
 
 ../port.c:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/FreeRTOS.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/FreeRTOS.h:
 
 C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stddef.h:
 
@@ -48,19 +48,19 @@ C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/machine/_stdint.h
 
 C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/FreeRTOSConfig.h:
+C:/Users/titus/OneDrive/Desktop/EP/EMP_Final_Project/FreeRTOSConfig.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/projdefs.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/projdefs.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/portable.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/portable.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/deprecated_definitions.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/deprecated_definitions.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/portmacro.h:
+C:/Users/titus/OneDrive/Desktop/EP/EMP_Final_Project/portmacro.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/mpu_wrappers.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/mpu_wrappers.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/task.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/task.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/list.h:
 

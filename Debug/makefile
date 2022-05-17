@@ -12,12 +12,14 @@ GEN_CMDS__FLAG :=
 ORDERED_OBJS += \
 "./adc.obj" \
 "./bank.obj" \
+"./coffee.obj" \
 "./display.obj" \
 "./file.obj" \
 "./gpio.obj" \
 "./heap_2.obj" \
 "./key.obj" \
 "./lcd.obj" \
+"./led.obj" \
 "./list.obj" \
 "./main.obj" \
 "./port.obj" \
@@ -28,6 +30,7 @@ ORDERED_OBJS += \
 "./string.obj" \
 "./systick_frt.obj" \
 "./tasks.obj" \
+"./tm4c123gh6pm_startup_ccs.obj" \
 "../tm4c123gh6pm.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -171,8 +174,8 @@ EMP_Final_Project.hex: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "adc.obj" "bank.obj" "display.obj" "file.obj" "gpio.obj" "heap_2.obj" "key.obj" "lcd.obj" "list.obj" "main.obj" "port.obj" "portasm.obj" "queue.obj" "startup_frt.obj" "status_led.obj" "string.obj" "systick_frt.obj" "tasks.obj" 
-	-$(RM) "adc.d" "bank.d" "display.d" "file.d" "gpio.d" "heap_2.d" "key.d" "lcd.d" "list.d" "main.d" "port.d" "queue.d" "startup_frt.d" "status_led.d" "string.d" "systick_frt.d" "tasks.d" 
+	-$(RM) "adc.obj" "bank.obj" "coffee.obj" "display.obj" "file.obj" "gpio.obj" "heap_2.obj" "key.obj" "lcd.obj" "led.obj" "list.obj" "main.obj" "port.obj" "portasm.obj" "queue.obj" "startup_frt.obj" "status_led.obj" "string.obj" "systick_frt.obj" "tasks.obj" "tm4c123gh6pm_startup_ccs.obj" 
+	-$(RM) "adc.d" "bank.d" "coffee.d" "display.d" "file.d" "gpio.d" "heap_2.d" "key.d" "lcd.d" "led.d" "list.d" "main.d" "port.d" "queue.d" "startup_frt.d" "status_led.d" "string.d" "systick_frt.d" "tasks.d" "tm4c123gh6pm_startup_ccs.d" 
 	-$(RM) "portasm.d" 
 	-@echo 'Finished clean'
 	-@echo ' '

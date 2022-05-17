@@ -56,6 +56,7 @@ void display_task(void *pvParameters)
     FP32 grind_time;
     FP32 brew_time;
     FP32 milk_time;
+    FP32 inactivity;
     while (1)
     {
         switch (my_state)
@@ -108,7 +109,7 @@ void display_task(void *pvParameters)
                     milk_time = 0.0f;
                     break;
                 }
-                my_state = BREW
+                my_state = BREW;
             }
             break;
         case SELECT_PAYMENT:
@@ -179,14 +180,14 @@ void display_task(void *pvParameters)
             }
             break;
         case BREW:
-            FP32 inactivity = 0.0f;
+            inactivity = 0.0f;
             BOOLEAN choosed_coffee = (screen == ESPRESSO || screen == FILTER_COFFEE || screen == LATTE);
             while(1)
             {
-                xSemaphoreTake(lcd_mutex, portMAX_DELAY)
+                xSemaphoreTake(lcd_mutex, portMAX_DELAY);
                 if(inactivity > MAX_INACTIVITY_MS)
                 {
-                    beak;
+                    break;
                 }
                 else if(!get_sw2()) // if true skip
                 {
@@ -211,20 +212,20 @@ void display_task(void *pvParameters)
                     if (grind_time > 0.0f)
                     {
                         led_red();
-                        lprintf(0, "Grinding...");
+                        gfprintf(0, "Grinding...");
                         // still need to find time in second
                         grind_time -= 100.0f / 1000.0f;
                     }
                     else if (brew_time > 0.0f)
                     {
                         led_yellow();
-                        lprintf(0, "Brewing...");
+                        gfprintf(0, "Brewing...");
                         brew_time -= 100.0f / 1000.0f;
                     }
                     else if (milk_time > 0.0f)
                     {
                         led_green();
-                        lprintf(0, "Milk froth...");
+                        gfprintf(0, "Milk froth...");
                         milk_time -= 100.0f / 1000.0f;
                     }
                     else
@@ -327,9 +328,9 @@ INT8U check_input(INT8U *my_state, INT8U *screen)
     return input_received;
 }
 
-INT8U brew_coffee(INT8U *my_state, INT8U *coffee){
-
-}
+//INT8U brew_coffee(INT8U *my_state, INT8U *coffee){
+//
+//}
 
 
 /****************************** End Of Module *******************************/

@@ -14,18 +14,19 @@ key.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_std
 key.obj: ../tm4c123gh6pm.h
 key.obj: ../emp_type.h
 key.obj: ../tmodel.h
-key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/FreeRTOS.h
+key.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/FreeRTOS.h
 key.obj: C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stddef.h
-key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/FreeRTOSConfig.h
-key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/projdefs.h
-key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/portable.h
-key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/deprecated_definitions.h
-key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/portmacro.h
-key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/mpu_wrappers.h
+key.obj: C:/Users/titus/OneDrive/Desktop/EP/EMP_Final_Project/FreeRTOSConfig.h
+key.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/projdefs.h
+key.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/portable.h
+key.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/deprecated_definitions.h
+key.obj: C:/Users/titus/OneDrive/Desktop/EP/EMP_Final_Project/portmacro.h
+key.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/mpu_wrappers.h
 key.obj: ../queue.h
-key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/task.h
-key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h
-key.obj: C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/semphr.h
+key.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/task.h
+key.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/list.h
+key.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/semphr.h
+key.obj: D:/Documents/SDU/Embedded\ programming/frt10/inc/queue.h
 
 ../key.c:
 
@@ -55,27 +56,29 @@ C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/sys/_stdint.h:
 
 ../tmodel.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/FreeRTOS.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/FreeRTOS.h:
 
 C:/ti/ccs1110/ccs/tools/compiler/ti-cgt-arm_20.2.5.LTS/include/stddef.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_Project/FreeRTOSConfig.h:
+C:/Users/titus/OneDrive/Desktop/EP/EMP_Final_Project/FreeRTOSConfig.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/projdefs.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/projdefs.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/portable.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/portable.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/deprecated_definitions.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/deprecated_definitions.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/portmacro.h:
+C:/Users/titus/OneDrive/Desktop/EP/EMP_Final_Project/portmacro.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/mpu_wrappers.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/mpu_wrappers.h:
 
 ../queue.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/task.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/task.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/list.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/list.h:
 
-C:/Users/Rokas/Desktop/Embedded\ programming/EMP_Final_project/inc/semphr.h:
+D:/Documents/SDU/Embedded\ programming/frt10/inc/semphr.h:
+
+D:/Documents/SDU/Embedded\ programming/frt10/inc/queue.h:
 

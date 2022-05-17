@@ -14,12 +14,14 @@ ASM_SRCS += \
 C_SRCS += \
 ../adc.c \
 ../bank.c \
+../coffee.c \
 ../display.c \
 ../file.c \
 ../gpio.c \
 ../heap_2.c \
 ../key.c \
 ../lcd.c \
+../led.c \
 ../list.c \
 ../main.c \
 ../port.c \
@@ -28,17 +30,20 @@ C_SRCS += \
 ../status_led.c \
 ../string.c \
 ../systick_frt.c \
-../tasks.c 
+../tasks.c \
+../tm4c123gh6pm_startup_ccs.c 
 
 C_DEPS += \
 ./adc.d \
 ./bank.d \
+./coffee.d \
 ./display.d \
 ./file.d \
 ./gpio.d \
 ./heap_2.d \
 ./key.d \
 ./lcd.d \
+./led.d \
 ./list.d \
 ./main.d \
 ./port.d \
@@ -47,17 +52,20 @@ C_DEPS += \
 ./status_led.d \
 ./string.d \
 ./systick_frt.d \
-./tasks.d 
+./tasks.d \
+./tm4c123gh6pm_startup_ccs.d 
 
 OBJS += \
 ./adc.obj \
 ./bank.obj \
+./coffee.obj \
 ./display.obj \
 ./file.obj \
 ./gpio.obj \
 ./heap_2.obj \
 ./key.obj \
 ./lcd.obj \
+./led.obj \
 ./list.obj \
 ./main.obj \
 ./port.obj \
@@ -67,7 +75,8 @@ OBJS += \
 ./status_led.obj \
 ./string.obj \
 ./systick_frt.obj \
-./tasks.obj 
+./tasks.obj \
+./tm4c123gh6pm_startup_ccs.obj 
 
 ASM_DEPS += \
 ./portasm.d 
@@ -75,12 +84,14 @@ ASM_DEPS += \
 OBJS__QUOTED += \
 "adc.obj" \
 "bank.obj" \
+"coffee.obj" \
 "display.obj" \
 "file.obj" \
 "gpio.obj" \
 "heap_2.obj" \
 "key.obj" \
 "lcd.obj" \
+"led.obj" \
 "list.obj" \
 "main.obj" \
 "port.obj" \
@@ -90,17 +101,20 @@ OBJS__QUOTED += \
 "status_led.obj" \
 "string.obj" \
 "systick_frt.obj" \
-"tasks.obj" 
+"tasks.obj" \
+"tm4c123gh6pm_startup_ccs.obj" 
 
 C_DEPS__QUOTED += \
 "adc.d" \
 "bank.d" \
+"coffee.d" \
 "display.d" \
 "file.d" \
 "gpio.d" \
 "heap_2.d" \
 "key.d" \
 "lcd.d" \
+"led.d" \
 "list.d" \
 "main.d" \
 "port.d" \
@@ -109,7 +123,8 @@ C_DEPS__QUOTED += \
 "status_led.d" \
 "string.d" \
 "systick_frt.d" \
-"tasks.d" 
+"tasks.d" \
+"tm4c123gh6pm_startup_ccs.d" 
 
 ASM_DEPS__QUOTED += \
 "portasm.d" 
@@ -117,12 +132,14 @@ ASM_DEPS__QUOTED += \
 C_SRCS__QUOTED += \
 "../adc.c" \
 "../bank.c" \
+"../coffee.c" \
 "../display.c" \
 "../file.c" \
 "../gpio.c" \
 "../heap_2.c" \
 "../key.c" \
 "../lcd.c" \
+"../led.c" \
 "../list.c" \
 "../main.c" \
 "../port.c" \
@@ -131,7 +148,8 @@ C_SRCS__QUOTED += \
 "../status_led.c" \
 "../string.c" \
 "../systick_frt.c" \
-"../tasks.c" 
+"../tasks.c" \
+"../tm4c123gh6pm_startup_ccs.c" 
 
 ASM_SRCS__QUOTED += \
 "../portasm.asm" 

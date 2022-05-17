@@ -18,7 +18,7 @@
 #include "display.h"
 #include "key.h"
 #include "portmacro.h"
-#include "switch.h"
+//#include "switch.h"
 #include "led.h"
 
 #define USERTASK_STACK_SIZE configMINIMAL_STACK_SIZE // 70
@@ -47,7 +47,7 @@ static void setupHardware(void)
   init_systick();
   status_led_init();
   init_adc();
-  switch_init();
+//  switch_init();
   led_init();
 }
 
@@ -69,7 +69,7 @@ int main(void)
   xTaskCreate(lcd_task, "LCD", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
   xTaskCreate(key_task, "keypad", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
   xTaskCreate(display_task, "display", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
-  xTaskCreate(switch_task, "switch", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
+//  xTaskCreate(switch_task, "switch", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
 
   // starting scheduler
   vTaskStartScheduler();
