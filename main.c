@@ -21,6 +21,11 @@
 #include "switch.h"
 #include "led.h"
 #include "uart0.h"
+#include "logging.h"
+#include "sales_report.h"
+#include "coffee.h"
+
+extern QueueHandle_t uart0_rx_queue;
 
 #define USERTASK_STACK_SIZE configMINIMAL_STACK_SIZE // 70
 #define IDLE_PRIO 0
@@ -50,6 +55,8 @@ static void setupHardware(void)
   init_adc();
   switch_init();
   led_init();
+  log_init();
+  led_off();
 }
 
 int main(void)
