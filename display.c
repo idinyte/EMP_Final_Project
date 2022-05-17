@@ -36,6 +36,7 @@
 /*****************************   Variables   *******************************/
 extern SemaphoreHandle_t drink_selection;
 extern QueueHandle_t key_queue;
+//extern QueueHandle_t coffee_queue;
 extern SemaphoreHandle_t lcd_mutex;
 /*****************************   Functions   *******************************/
 
@@ -51,6 +52,10 @@ void display_task(void *pvParameters)
     static INT8U counter = 0;
     INT8U price;
     INT8U card_ch;
+    BOOLEAN amount_pay;
+    FP32 grind_time;
+    FP32 brew_time;
+    FP32 milk_time;
     while (1)
     {
         switch (my_state)
@@ -61,6 +66,9 @@ void display_task(void *pvParameters)
                      0x1B, 0x85, price, 0x1B, 0x8E, 0x7E);
             move_LCD(4, 1);
             gfprintf( COM2, "espresso");
+            grind_time = 5.0f;
+            brew_time = 15.0f;
+            milk_time = 0.0f;
             my_state = SELECT_COFFEE;
             break;
         case SELECT_COFFEE:
@@ -75,6 +83,9 @@ void display_task(void *pvParameters)
                              0x80, 0x7F, 0x1B, 0x85, price, 0x1B, 0x8E, 0x7E);
                     move_LCD(4, 1);
                     gfprintf( COM2, "espresso");
+                    grind_time = 5.0f;
+                    brew_time = 15.0f;
+                    milk_time = 0.0f;
                     break;
                 case LATTE:
                     price = 26;
@@ -82,6 +93,9 @@ void display_task(void *pvParameters)
                              0x80, 0x7F, 0x1B, 0x85, price, 0x1B, 0x8E, 0x7E);
                     move_LCD(5, 1);
                     gfprintf( COM2, "latte");
+                    grind_time = 5.0f;
+                    brew_time = 15.0f;
+                    milk_time = 3.0f;
                     break;
                 case FILTER_COFFEE:
                     price = 2;
@@ -89,8 +103,12 @@ void display_task(void *pvParameters)
                              0x80, 0x7F, 0x1B, 0x84, price, 0x1B, 0x8E, 0x7E);
                     move_LCD(2, 1);
                     gfprintf( COM2, "filter coffee");
+                    grind_time = 0.0f;
+                    brew_time = 0.0f;
+                    milk_time = 0.0f;
                     break;
                 }
+                my_state = BREW
             }
             break;
         case SELECT_PAYMENT:
@@ -107,7 +125,7 @@ void display_task(void *pvParameters)
                     break;
                 case CARD:
                     gfprintf( COM2, "%c%c%c%c4%c%cPay with%c%c6%c", 0xFF, 0x1B,
-                             0x80, 0x7F, 0x1B, 0x84, 0x1B, 0x8E, 0x7E);
+                             0x80, 0x7F, 0x1B,  0x84, 0x1B, 0x8E, 0x7E);
                     move_LCD(6, 1);
                     gfprintf( COM2, "card");
                     break;
@@ -157,6 +175,63 @@ void display_task(void *pvParameters)
                         wr_ch_LCD('*');
                     }
                     xSemaphoreGive(lcd_mutex);
+                }
+            }
+            break;
+        case BREW:
+            FP32 inactivity = 0.0f;
+            BOOLEAN choosed_coffee = (screen == ESPRESSO || screen == FILTER_COFFEE || screen == LATTE);
+            while(1)
+            {
+                xSemaphoreTake(lcd_mutex, portMAX_DELAY)
+                if(inactivity > MAX_INACTIVITY_MS)
+                {
+                    beak;
+                }
+                else if(!get_sw2()) // if true skip
+                {
+                    if(price != 0 && choosed_coffee)
+                    {
+                        gfprintf( COM2, "\n Place Cup");
+                        inactivity += 100.0f;
+                    }
+                }
+                else if(!get_sw1()) // if true skip
+                {
+                    if(price != 0 && choosed_coffee)
+                    {
+                        gfprintf( COM2, "\n Hold Start");
+                        inactivity += 100.0f;
+                    }
+                }
+                else{
+                    inactivity = 0.0f;
+
+
+                    if (grind_time > 0.0f)
+                    {
+                        led_red();
+                        lprintf(0, "Grinding...");
+                        // still need to find time in second
+                        grind_time -= 100.0f / 1000.0f;
+                    }
+                    else if (brew_time > 0.0f)
+                    {
+                        led_yellow();
+                        lprintf(0, "Brewing...");
+                        brew_time -= 100.0f / 1000.0f;
+                    }
+                    else if (milk_time > 0.0f)
+                    {
+                        led_green();
+                        lprintf(0, "Milk froth...");
+                        milk_time -= 100.0f / 1000.0f;
+                    }
+                    else
+                    {
+                        my_state = INITIALIZE;
+                        break;
+                    }
                 }
             }
             break;
@@ -251,5 +326,11 @@ INT8U check_input(INT8U *my_state, INT8U *screen)
     }
     return input_received;
 }
+
+INT8U brew_coffee(INT8U *my_state, INT8U *coffee){
+
+}
+
+
 /****************************** End Of Module *******************************/
 

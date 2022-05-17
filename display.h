@@ -23,6 +23,9 @@
 /***************************** Include files *******************************/
 
 /*****************************    Defines    *******************************/
+
+#include "led.h"
+
 #define  EMPTY             -1
 #define  INITIALIZE         0
 #define  SELECT_COFFEE      1
@@ -34,6 +37,18 @@
 #define  FILTER_COFFEE      11
 #define  CASH               12
 #define  CARD               13
+#define  BREW               14
+
+#define COFFEE_TYPES_LENGTH     5 // Allows for one digit types
+#define COFFEE_CYCLE_TIME_MS    3000
+#define COFFEE_NAME_LENGTH      14
+
+#define SWITCH_POLL_DELAY_MS    500 // Also determines display flash rate
+#define SLOW_DISPENSE_TIME_MS   2000.0f
+#define SLOW_DISPENSE_AMOUNT    0.5f
+#define FAST_DISPENSE_AMOUNT    1.0f
+#define MAX_INACTIVITY_MS       5000.0f
+
 /*****************************   Constants   *******************************/
 
 /*****************************   Functions   *******************************/
@@ -51,5 +66,8 @@ INT8U check_input(INT8U *my_state, INT8U *coffee);
 ******************************************************************************/
 
 /****************************** End Of Module *******************************/
+
+INT8U brew_coffee(INT8U *my_state, INT8U *coffee);
+
 #endif
 
