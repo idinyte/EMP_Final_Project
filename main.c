@@ -20,6 +20,7 @@
 #include "portmacro.h"
 #include "switch.h"
 #include "led.h"
+#include "uart0.h"
 
 #define USERTASK_STACK_SIZE configMINIMAL_STACK_SIZE // 70
 #define IDLE_PRIO 0
@@ -40,7 +41,7 @@ static void setupHardware(void)
  *   Function :
  *****************************************************************************/
 {
-
+  uart0_init(19200, 8, 1, 0);
   init_gpio();
   init_files();
   // Warning: If you do not initialize the hardware clock, the timings will be inaccurate
