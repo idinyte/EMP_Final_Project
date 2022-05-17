@@ -31,6 +31,7 @@
 #define SEM_LCD          USER_SEM
 #define SEM_RTC_UPDATED  USER_SEM+1
 */
+#define SEM_LEN_SMALL  6
 #define SEM_LEN_MED    32
 
 // QUEUEs.
