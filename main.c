@@ -33,6 +33,8 @@ extern QueueHandle_t uart0_rx_queue;
 #define MED_PRIO 2
 #define HIGH_PRIO 3
 
+TaskHandle_t coffee_t;
+
 QueueHandle_t lcd_queue; // used for accessing and pushing to queue
 QueueHandle_t key_queue;
 
@@ -57,6 +59,7 @@ static void setupHardware(void)
   led_init();
   log_init();
   led_off();
+  coffee_init();
 }
 
 int main(void)
@@ -74,10 +77,16 @@ int main(void)
 
   // creating tasks
   xTaskCreate(status_led_task, "Status_led", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
-  xTaskCreate(lcd_task, "LCD", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
+  xTaskCreate(lcd_task, "LCD", USERTASK_STACK_SIZE, NULL, MEDIUM_PRIO, NULL);
   xTaskCreate(key_task, "keypad", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
   xTaskCreate(display_task, "display", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
   xTaskCreate(switch_task, "switch", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
+  xTaskCreate(coffee_task, USERTASK_STACK_SIZE, NULL, LOW_PRIO, &coffee_t);
+  xTaskCreate(uart0_write_task, "UART write task", USERTASK_STACK_SIZE, NULL, LOW_PRIO, NULL);
+  xTaskCreate(key_task, "Key task", USERTASK_STACK_SIZE, NULL, IDLE_PRIO, NULL);
+  xTaskCreate(log_task, "Logging task", USERTASK_STACK_SIZE, NULL, MED_PRIO, NULL);
+  xTaskCreate(ui_task, "UI task", USERTASK_STACK_SIZE, NULL, MED_PRIO, NULL);
+
 
   // starting scheduler
   vTaskStartScheduler();
